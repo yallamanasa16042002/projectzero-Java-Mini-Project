@@ -11,6 +11,8 @@ public class Post {
     private String status;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
+    //private list of likes
+    //private list of comments
 
     // No-argument constructor
     public Post() {

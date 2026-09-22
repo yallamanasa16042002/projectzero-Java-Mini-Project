@@ -5,8 +5,8 @@ import java.time.LocalDateTime;
 public class Like {
 
     private int likeId;
-    private int userId;
-    private int postId;
+    private int userId;//private user userid
+    private int postId;//private post postid
     private LocalDateTime createdAt;
 
     // No-argument constructor

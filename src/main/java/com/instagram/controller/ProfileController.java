@@ -12,27 +12,23 @@ public class ProfileController {
     }
 
     public boolean createProfile(Profile profile) {
-        // TODO: Call ProfileService
-        return false;
+        return profileService.createProfile(profile);
     }
 
     public Profile getProfileById(int profileId) {
-        // TODO: Call ProfileService
-        return null;
+        return profileService.getProfileById(profileId);
     }
 
     public Profile getProfileByUserId(int userId) {
-        // TODO: Call ProfileService
-        return null;
+        return profileService.getProfileByUserId(userId);
     }
 
     public boolean updateProfile(Profile profile) {
-        // TODO: Call ProfileService
-        return false;
+        return profileService.updateProfile(profile);
     }
 
     public boolean deleteProfile(int profileId) {
-        // TODO: Call ProfileService
+        // TODO: Implement DELETE operation
         return false;
     }
 }

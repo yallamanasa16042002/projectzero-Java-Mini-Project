@@ -16,35 +16,104 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public boolean registerUser(User user) {
-        // TODO: Add validation
+
+        if (user == null) {
+            return false;
+        }
+
+        if (user.getUsername() == null ||
+                user.getUsername().trim().isEmpty()) {
+            return false;
+        }
+
+        if (user.getEmail() == null ||
+                user.getEmail().trim().isEmpty()) {
+            return false;
+        }
+
+        if (user.getPasswordHash() == null ||
+                user.getPasswordHash().trim().isEmpty()) {
+            return false;
+        }
+
+        User existingUserByUsername =
+                userDAO.getUserByUsername(user.getUsername());
+
+        if (existingUserByUsername != null) {
+            return false;
+        }
+
+        User existingUserByEmail =
+                userDAO.getUserByEmail(user.getEmail());
+
+        if (existingUserByEmail != null) {
+            return false;
+        }
+
+        // Default values for a newly registered user
+        user.setStatus("ACTIVE");
+        user.setRole("USER");
+
         return userDAO.addUser(user);
     }
 
     @Override
     public User login(String username, String password) {
-        // TODO: Implement login validation
-        return null;
+
+        // Validate username
+        if (username == null || username.trim().isEmpty()) {
+            return null;
+        }
+
+        // Validate password
+        if (password == null || password.trim().isEmpty()) {
+            return null;
+        }
+
+        // Find user by username
+        User user = userDAO.getUserByUsername(username);
+
+        // User does not exist
+        if (user == null) {
+            return null;
+        }
+
+        // Check password
+        if (!user.getPasswordHash().equals(password)) {
+            return null;
+        }
+
+        // Check whether user is active
+        if (!"ACTIVE".equals(user.getStatus())) {
+            return null;
+        }
+
+        // Login successful
+        return user;
     }
 
     @Override
     public User getUserById(int userId) {
-        return userDAO.getUserById(userId);
+        // TODO: Implement get user by ID
+        return null;
     }
 
     @Override
     public User getUserByUsername(String username) {
-        return userDAO.getUserByUsername(username);
+        // TODO: Implement get user by username
+        return null;
     }
 
     @Override
     public List<User> getAllUsers() {
-        return userDAO.getAllUsers();
+        // TODO: Implement get all users
+        return null;
     }
 
     @Override
     public boolean updateUser(User user) {
         // TODO: Add validation
-        return userDAO.updateUser(user);
+        return false;
     }
 
     @Override

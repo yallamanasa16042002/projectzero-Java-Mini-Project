@@ -13,7 +13,7 @@ public class JDBCUtil {
             "root";//enter your username here//
 
     private static final String PASSWORD =
-            "";//enter your password here //
+            "root";//enter your password here //
 
     public static Connection getConnection() throws SQLException {
         return DriverManager.getConnection(

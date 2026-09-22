@@ -13,4 +13,5 @@ public interface ProfileDAO {
     boolean updateProfile(Profile profile);
 
     boolean deleteProfile(int profileId);
+
 }

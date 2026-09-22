@@ -1,13 +1,13 @@
 package com.instagram.dao;
 
 import com.instagram.model.User;
-
-import java.util.List;
 import com.instagram.util.JDBCUtil;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 
 public class UserDAOImpl implements UserDAO {
 
@@ -45,13 +45,67 @@ public class UserDAOImpl implements UserDAO {
 
     @Override
     public User getUserByUsername(String username) {
-        // TODO: Implement SELECT query by username
+
+        String sql = "SELECT * FROM users WHERE username = ?";
+
+        try (Connection connection = JDBCUtil.getConnection();
+             PreparedStatement statement = connection.prepareStatement(sql)) {
+
+            statement.setString(1, username);
+
+            ResultSet resultSet = statement.executeQuery();
+
+            if (resultSet.next()) {
+
+                User user = new User();
+
+                user.setUserId(resultSet.getInt("user_id"));
+                user.setUsername(resultSet.getString("username"));
+                user.setEmail(resultSet.getString("email"));
+                user.setPasswordHash(resultSet.getString("password_hash"));
+                user.setStatus(resultSet.getString("status"));
+                user.setRole(resultSet.getString("role"));
+
+                return user;
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
         return null;
     }
 
     @Override
     public User getUserByEmail(String email) {
-        // TODO: Implement SELECT query by email
+
+        String sql = "SELECT * FROM users WHERE email = ?";
+
+        try (Connection connection = JDBCUtil.getConnection();
+             PreparedStatement statement = connection.prepareStatement(sql)) {
+
+            statement.setString(1, email);
+
+            ResultSet resultSet = statement.executeQuery();
+
+            if (resultSet.next()) {
+
+                User user = new User();
+
+                user.setUserId(resultSet.getInt("user_id"));
+                user.setUsername(resultSet.getString("username"));
+                user.setEmail(resultSet.getString("email"));
+                user.setPasswordHash(resultSet.getString("password_hash"));
+                user.setStatus(resultSet.getString("status"));
+                user.setRole(resultSet.getString("role"));
+
+                return user;
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
         return null;
     }
 
