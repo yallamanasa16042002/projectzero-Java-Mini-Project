@@ -12,7 +12,7 @@ import java.util.List;
 public class UserDAOImpl implements UserDAO {
 
     @Override
-    public boolean addUser(User user) {
+    public boolean addUser(User users) {
 
         String sql = "INSERT INTO users " +
                 "(username, email, password_hash, status, role) " +
@@ -21,11 +21,11 @@ public class UserDAOImpl implements UserDAO {
         try (Connection connection = JDBCUtil.getConnection();
              PreparedStatement statement = connection.prepareStatement(sql)) {
 
-            statement.setString(1, user.getUsername());
-            statement.setString(2, user.getEmail());
-            statement.setString(3, user.getPasswordHash());
-            statement.setString(4, user.getStatus());
-            statement.setString(5, user.getRole());
+            statement.setString(1, users.getUsername());
+            statement.setString(2, users.getEmail());
+            statement.setString(3, users.getPasswordHash());
+            statement.setString(4, users.getStatus());
+            statement.setString(5, users.getRole());
 
             int rows = statement.executeUpdate();
 

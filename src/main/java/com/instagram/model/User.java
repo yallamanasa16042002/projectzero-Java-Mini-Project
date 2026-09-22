@@ -2,7 +2,7 @@ package com.instagram.model;
 
 import java.time.LocalDateTime;
 
-public class User {
+public class User{
 
     private int userId;
     private String username;

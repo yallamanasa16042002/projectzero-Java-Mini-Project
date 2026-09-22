@@ -7,13 +7,13 @@ import java.sql.SQLException;
 public class JDBCUtil {
 
     private static final String URL =
-            "jdbc:mysql://localhost:3306/instagram_db";// add your url//
+            "jdbc:mysql://localhost:3306/SocialMediaApp";// add your url//
 
     private static final String USERNAME =
             "root";//enter your username here//
 
     private static final String PASSWORD =
-            "root";//enter your password here //
+            "Manasa@1604";//enter your password here //
 
     public static Connection getConnection() throws SQLException {
         return DriverManager.getConnection(
