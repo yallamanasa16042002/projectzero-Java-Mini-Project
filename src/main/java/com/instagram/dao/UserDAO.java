@@ -7,16 +7,17 @@ import java.util.List;
 public interface UserDAO {
 
     boolean addUser(User user);
+    User login(String username, String password);
 
     User getUserById(int userId);
 
     User getUserByUsername(String username);
 
-    User getUserByEmail(String email);
+    //User getUserByEmail(String email);
 
     List<User> getAllUsers();
 
     boolean updateUser(User user);
 
-    boolean deleteUser(int userId);
+    boolean deleteuser(int userId);
 }

@@ -19,4 +19,5 @@ public interface UserService {
     boolean updateUser(User user);
 
     boolean deactivateUser(int userId);
+    boolean deleteuser(int userID);
 }

@@ -10,8 +10,8 @@ public class User{
     private String passwordHash;
     private String status;
     private String role;
-    private LocalDateTime createdAt;
-    private LocalDateTime updatedAt;
+    //private LocalDateTime createdAt;
+    //private LocalDateTime updatedAt;
 
     // No-argument constructor
     public User() {
@@ -28,8 +28,8 @@ public class User{
         this.passwordHash = passwordHash;
         this.status = status;
         this.role = role;
-        this.createdAt = createdAt;
-        this.updatedAt = updatedAt;
+        //this.createdAt = createdAt;
+        //this.updatedAt = updatedAt;
     }
 
     // Getters and Setters
@@ -75,26 +75,25 @@ public class User{
     }
 
     public String getRole() {
-        return role;
+       return role;
     }
 
     public void setRole(String role) {
-        this.role = role;
+      this.role = role;
     }
 
-    public LocalDateTime getCreatedAt() {
-        return createdAt;
+   // public LocalDateTime getCreatedAt() {
+     //return createdAt;
     }
 
-    public void setCreatedAt(LocalDateTime createdAt) {
-        this.createdAt = createdAt;
-    }
+    //public void setCreatedAt(LocalDateTime createdAt) {
+      //  this.createdAt = createdAt;
+    //}
 
-    public LocalDateTime getUpdatedAt() {
-        return updatedAt;
-    }
+    //public LocalDateTime getUpdatedAt() {
+       // return updatedAt;
+    //}
 
-    public void setUpdatedAt(LocalDateTime updatedAt) {
-        this.updatedAt = updatedAt;
-    }
-}
+    //public void setUpdatedAt(LocalDateTime updatedAt) {
+      //  this.updatedAt = updatedAt;
+   // }

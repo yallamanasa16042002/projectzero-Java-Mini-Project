@@ -43,16 +43,16 @@ public class UserServiceImpl implements UserService {
             return false;
         }
 
-        User existingUserByEmail =
-                userDAO.getUserByEmail(user.getEmail());
+       // User existingUserByEmail =
+               // userDAO.getUserByEmail(user.getEmail());
 
-        if (existingUserByEmail != null) {
-            return false;
-        }
+//if (existingUserByEmail != null) {
+           // return false;
+       // }
 
         // Default values for a newly registered user
-        user.setStatus("ACTIVE");
-        user.setRole("USER");
+        //user.setStatus("ACTIVE");
+       // user.setRole("USER");
 
         return userDAO.addUser(user);
     }
@@ -95,25 +95,25 @@ public class UserServiceImpl implements UserService {
     @Override
     public User getUserById(int userId) {
         // TODO: Implement get user by ID
-        return null;
+        return userDAO.getUserById(userId);
     }
 
     @Override
     public User getUserByUsername(String username) {
         // TODO: Implement get user by username
-        return null;
+        return userDAO.getUserByUsername(username);
     }
 
     @Override
     public List<User> getAllUsers() {
         // TODO: Implement get all users
-        return null;
+        return userDAO.getAllUsers();
     }
 
     @Override
     public boolean updateUser(User user) {
         // TODO: Add validation
-        return false;
+        return userDAO.updateUser(user);
     }
 
     @Override
@@ -121,4 +121,12 @@ public class UserServiceImpl implements UserService {
         // TODO: Implement deactivation
         return false;
     }
+
+    @Override
+    public boolean deleteuser(int userID) {
+        return userDAO.deleteuser(userID);
+
+    }
+
+
 }

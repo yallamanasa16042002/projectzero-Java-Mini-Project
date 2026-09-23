@@ -26,4 +26,5 @@ public class UserTest {
             System.out.println("Failed to add user.");
         }
     }
+
 }
