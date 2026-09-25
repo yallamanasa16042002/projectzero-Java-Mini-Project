@@ -1,0 +1,583 @@
+2026-09-25 17:07:07,103 INFO  [main] c.i.controller.UserController - Instagram application started
+2026-09-25 17:07:07,121 INFO  [main] c.i.controller.UserController - 
+2026-09-25 17:07:07,122 INFO  [main] c.i.controller.UserController - ========== INSTAGRAM ==========
+2026-09-25 17:07:07,122 INFO  [main] c.i.controller.UserController - 1. Register
+2026-09-25 17:07:07,122 INFO  [main] c.i.controller.UserController - 2. Login
+2026-09-25 17:07:07,122 INFO  [main] c.i.controller.UserController - 3. Exit
+2026-09-25 17:07:07,122 INFO  [main] c.i.controller.UserController - Enter your choice:
+2026-09-25 17:07:16,520 INFO  [main] c.i.controller.UserController - ========== REGISTER ==========
+2026-09-25 17:07:16,522 INFO  [main] c.i.controller.UserController - Enter username:
+2026-09-25 17:07:23,261 INFO  [main] c.i.controller.UserController - Enter email:
+2026-09-25 17:07:28,933 INFO  [main] c.i.controller.UserController - Enter password:
+2026-09-25 17:07:38,051 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 17:07:38,099 INFO  [main] com.instagram.dao.UserDAOImpl - User created successfully with ID: 13
+2026-09-25 17:07:38,104 INFO  [main] c.instagram.service.UserServiceImpl - User registration successful with ID: 13
+2026-09-25 17:07:38,105 INFO  [main] c.i.controller.UserController - Registration successful. User ID: 13
+2026-09-25 17:07:38,105 INFO  [main] c.i.controller.UserController - 
+2026-09-25 17:07:38,106 INFO  [main] c.i.controller.UserController - ========== INSTAGRAM ==========
+2026-09-25 17:07:38,106 INFO  [main] c.i.controller.UserController - 1. Register
+2026-09-25 17:07:38,106 INFO  [main] c.i.controller.UserController - 2. Login
+2026-09-25 17:07:38,107 INFO  [main] c.i.controller.UserController - 3. Exit
+2026-09-25 17:07:38,107 INFO  [main] c.i.controller.UserController - Enter your choice:
+2026-09-25 17:22:50,409 INFO  [main] c.i.controller.MainController - MainController initialized
+2026-09-25 17:22:50,410 INFO  [main] c.i.controller.MainController - UserController connected successfully
+2026-09-25 17:22:50,410 INFO  [main] c.i.controller.MainController - ========================================
+2026-09-25 17:22:50,410 INFO  [main] c.i.controller.MainController -       INSTAGRAM JAVA APPLICATION
+2026-09-25 17:22:50,410 INFO  [main] c.i.controller.MainController - ========================================
+2026-09-25 17:22:50,410 INFO  [main] c.i.controller.MainController - 
+2026-09-25 17:22:50,410 INFO  [main] c.i.controller.MainController - ========== MAIN MENU ==========
+2026-09-25 17:22:50,411 INFO  [main] c.i.controller.MainController - 1. Register
+2026-09-25 17:22:50,411 INFO  [main] c.i.controller.MainController - 2. Login
+2026-09-25 17:22:50,411 INFO  [main] c.i.controller.MainController - 3. Exit
+2026-09-25 17:22:50,411 INFO  [main] c.i.controller.MainController - Enter your choice: 
+2026-09-25 17:23:03,530 INFO  [main] c.i.controller.UserController - ========== USER REGISTRATION ==========
+2026-09-25 17:23:03,530 INFO  [main] c.i.controller.UserController - Enter username: 
+2026-09-25 17:23:06,488 INFO  [main] c.i.controller.UserController - Enter email: 
+2026-09-25 17:23:10,565 INFO  [main] c.i.controller.UserController - Enter password: 
+2026-09-25 17:23:18,692 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 17:23:19,039 ERROR [main] c.i.controller.UserController - Registration database operation failed
+com.instagram.exception.DataAccessException: Error while creating user
+	at com.instagram.dao.UserDAOImpl.createUser(UserDAOImpl.java:66)
+	at com.instagram.service.UserServiceImpl.registerUser(UserServiceImpl.java:94)
+	at com.instagram.controller.UserController.registerUser(UserController.java:70)
+	at com.instagram.controller.MainController.showGuestMenu(MainController.java:118)
+	at com.instagram.controller.MainController.start(MainController.java:67)
+	at com.instagram.App.main(App.java:12)
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'VN' for key 'users.username'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:109)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1166)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1101)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1448)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1084)
+	at com.instagram.dao.UserDAOImpl.createUser(UserDAOImpl.java:36)
+	... 5 common frames omitted
+2026-09-25 17:23:19,040 INFO  [main] c.i.controller.MainController - 
+2026-09-25 17:23:19,040 INFO  [main] c.i.controller.MainController - ========== MAIN MENU ==========
+2026-09-25 17:23:19,040 INFO  [main] c.i.controller.MainController - 1. Register
+2026-09-25 17:23:19,041 INFO  [main] c.i.controller.MainController - 2. Login
+2026-09-25 17:23:19,041 INFO  [main] c.i.controller.MainController - 3. Exit
+2026-09-25 17:23:19,041 INFO  [main] c.i.controller.MainController - Enter your choice: 
+2026-09-25 17:24:48,138 INFO  [main] c.i.controller.UserController - ========== USER REGISTRATION ==========
+2026-09-25 17:24:48,138 INFO  [main] c.i.controller.UserController - Enter username: 
+2026-09-25 17:24:50,996 INFO  [main] c.i.controller.UserController - Enter email: 
+2026-09-25 17:24:56,700 INFO  [main] c.i.controller.UserController - Enter password: 
+2026-09-25 17:24:59,197 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 17:24:59,211 INFO  [main] com.instagram.dao.UserDAOImpl - User created successfully with ID: 15
+2026-09-25 17:24:59,212 INFO  [main] c.instagram.service.UserServiceImpl - User registration successful with ID: 15
+2026-09-25 17:24:59,212 INFO  [main] c.i.controller.UserController - Registration successful. User ID: 15
+2026-09-25 17:24:59,212 INFO  [main] c.i.controller.MainController - 
+2026-09-25 17:24:59,212 INFO  [main] c.i.controller.MainController - ========== MAIN MENU ==========
+2026-09-25 17:24:59,212 INFO  [main] c.i.controller.MainController - 1. Register
+2026-09-25 17:24:59,212 INFO  [main] c.i.controller.MainController - 2. Login
+2026-09-25 17:24:59,213 INFO  [main] c.i.controller.MainController - 3. Exit
+2026-09-25 17:24:59,213 INFO  [main] c.i.controller.MainController - Enter your choice: 
+2026-09-25 17:25:01,368 INFO  [main] c.i.controller.UserController - ========== USER LOGIN ==========
+2026-09-25 17:25:01,369 INFO  [main] c.i.controller.UserController - Enter username or email: 
+2026-09-25 17:25:06,830 INFO  [main] c.i.controller.UserController - Enter password: 
+2026-09-25 17:25:10,488 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 17:25:10,491 INFO  [main] com.instagram.dao.UserDAOImpl - Active user found for login identifier: test
+2026-09-25 17:25:10,492 INFO  [main] c.instagram.service.UserServiceImpl - User login successful for: test
+2026-09-25 17:25:10,492 INFO  [main] c.i.controller.UserController - Login successful. Welcome, test
+2026-09-25 17:25:10,492 INFO  [main] c.i.controller.MainController - 
+2026-09-25 17:25:10,492 INFO  [main] c.i.controller.MainController - ========== USER MENU ==========
+2026-09-25 17:25:10,492 INFO  [main] c.i.controller.MainController - Logged in as: test
+2026-09-25 17:25:10,492 INFO  [main] c.i.controller.MainController - 1. View My Account
+2026-09-25 17:25:10,492 INFO  [main] c.i.controller.MainController - 2. Search Users
+2026-09-25 17:25:10,492 INFO  [main] c.i.controller.MainController - 3. Update My Account
+2026-09-25 17:25:10,492 INFO  [main] c.i.controller.MainController - 4. Change Password
+2026-09-25 17:25:10,492 INFO  [main] c.i.controller.MainController - 5. Logout
+2026-09-25 17:25:10,492 INFO  [main] c.i.controller.MainController - 6. Exit
+2026-09-25 17:25:10,492 INFO  [main] c.i.controller.MainController - Enter your choice: 
+2026-09-25 17:25:15,376 INFO  [main] c.i.controller.UserController - ========== MY ACCOUNT ==========
+2026-09-25 17:25:15,377 INFO  [main] c.i.controller.UserController - User ID: 15
+2026-09-25 17:25:15,378 INFO  [main] c.i.controller.UserController - Username: test
+2026-09-25 17:25:15,378 INFO  [main] c.i.controller.UserController - Email: test@gmail.com
+2026-09-25 17:25:15,378 INFO  [main] c.i.controller.UserController - Status: ACTIVE
+2026-09-25 17:25:15,379 INFO  [main] c.i.controller.UserController - Created At: 2026-09-25 17:24:59
+2026-09-25 17:25:15,379 INFO  [main] c.i.controller.MainController - 
+2026-09-25 17:25:15,379 INFO  [main] c.i.controller.MainController - ========== USER MENU ==========
+2026-09-25 17:25:15,379 INFO  [main] c.i.controller.MainController - Logged in as: test
+2026-09-25 17:25:15,379 INFO  [main] c.i.controller.MainController - 1. View My Account
+2026-09-25 17:25:15,379 INFO  [main] c.i.controller.MainController - 2. Search Users
+2026-09-25 17:25:15,379 INFO  [main] c.i.controller.MainController - 3. Update My Account
+2026-09-25 17:25:15,379 INFO  [main] c.i.controller.MainController - 4. Change Password
+2026-09-25 17:25:15,379 INFO  [main] c.i.controller.MainController - 5. Logout
+2026-09-25 17:25:15,379 INFO  [main] c.i.controller.MainController - 6. Exit
+2026-09-25 17:25:15,379 INFO  [main] c.i.controller.MainController - Enter your choice: 
+2026-09-25 17:25:21,807 INFO  [main] c.i.controller.UserController - ========== SEARCH USERS ==========
+2026-09-25 17:25:21,808 INFO  [main] c.i.controller.UserController - Enter username to search: 
+2026-09-25 17:25:24,924 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 17:25:24,932 INFO  [main] com.instagram.dao.UserDAOImpl - User search completed for 'vn'. Results found: 2
+2026-09-25 17:25:24,932 INFO  [main] c.instagram.service.UserServiceImpl - User search completed for 'vn'. Results: 2
+2026-09-25 17:25:24,933 INFO  [main] c.i.controller.UserController - Users found: 2
+2026-09-25 17:25:24,933 INFO  [main] c.i.controller.UserController - User ID: 13, Username: VN, Email: vn@123, Status: ACTIVE
+2026-09-25 17:25:24,933 INFO  [main] c.i.controller.UserController - User ID: 12, Username: vnhj, Email: nikhil@gmail.com, Status: ACTIVE
+2026-09-25 17:25:24,933 INFO  [main] c.i.controller.MainController - 
+2026-09-25 17:25:24,933 INFO  [main] c.i.controller.MainController - ========== USER MENU ==========
+2026-09-25 17:25:24,933 INFO  [main] c.i.controller.MainController - Logged in as: test
+2026-09-25 17:25:24,933 INFO  [main] c.i.controller.MainController - 1. View My Account
+2026-09-25 17:25:24,933 INFO  [main] c.i.controller.MainController - 2. Search Users
+2026-09-25 17:25:24,933 INFO  [main] c.i.controller.MainController - 3. Update My Account
+2026-09-25 17:25:24,933 INFO  [main] c.i.controller.MainController - 4. Change Password
+2026-09-25 17:25:24,933 INFO  [main] c.i.controller.MainController - 5. Logout
+2026-09-25 17:25:24,933 INFO  [main] c.i.controller.MainController - 6. Exit
+2026-09-25 17:25:24,933 INFO  [main] c.i.controller.MainController - Enter your choice: 
+2026-09-25 17:25:45,788 INFO  [main] c.i.controller.UserController - ========== UPDATE MY ACCOUNT ==========
+2026-09-25 17:25:45,789 INFO  [main] c.i.controller.UserController - Current username: test
+2026-09-25 17:25:45,789 INFO  [main] c.i.controller.UserController - Current email: test@gmail.com
+2026-09-25 17:25:45,790 INFO  [main] c.i.controller.UserController - Enter new username (press Enter to keep current): 
+2026-09-25 17:25:54,919 INFO  [main] c.i.controller.UserController - Enter new email (press Enter to keep current): 
+2026-09-25 17:25:55,846 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 17:25:55,861 INFO  [main] com.instagram.dao.UserDAOImpl - User updated successfully with ID: 15
+2026-09-25 17:25:55,861 INFO  [main] c.instagram.service.UserServiceImpl - User updated successfully with ID: 15
+2026-09-25 17:25:55,861 INFO  [main] c.i.controller.UserController - Account updated successfully
+2026-09-25 17:25:55,861 INFO  [main] c.i.controller.MainController - 
+2026-09-25 17:25:55,861 INFO  [main] c.i.controller.MainController - ========== USER MENU ==========
+2026-09-25 17:25:55,861 INFO  [main] c.i.controller.MainController - Logged in as: testnew
+2026-09-25 17:25:55,861 INFO  [main] c.i.controller.MainController - 1. View My Account
+2026-09-25 17:25:55,861 INFO  [main] c.i.controller.MainController - 2. Search Users
+2026-09-25 17:25:55,862 INFO  [main] c.i.controller.MainController - 3. Update My Account
+2026-09-25 17:25:55,862 INFO  [main] c.i.controller.MainController - 4. Change Password
+2026-09-25 17:25:55,862 INFO  [main] c.i.controller.MainController - 5. Logout
+2026-09-25 17:25:55,862 INFO  [main] c.i.controller.MainController - 6. Exit
+2026-09-25 17:25:55,862 INFO  [main] c.i.controller.MainController - Enter your choice: 
+2026-09-25 17:26:03,906 INFO  [main] c.i.controller.UserController - ========== MY ACCOUNT ==========
+2026-09-25 17:26:03,906 INFO  [main] c.i.controller.UserController - User ID: 15
+2026-09-25 17:26:03,906 INFO  [main] c.i.controller.UserController - Username: testnew
+2026-09-25 17:26:03,906 INFO  [main] c.i.controller.UserController - Email: test@gmail.com
+2026-09-25 17:26:03,906 INFO  [main] c.i.controller.UserController - Status: ACTIVE
+2026-09-25 17:26:03,907 INFO  [main] c.i.controller.UserController - Created At: 2026-09-25 17:24:59
+2026-09-25 17:26:03,907 INFO  [main] c.i.controller.MainController - 
+2026-09-25 17:26:03,907 INFO  [main] c.i.controller.MainController - ========== USER MENU ==========
+2026-09-25 17:26:03,907 INFO  [main] c.i.controller.MainController - Logged in as: testnew
+2026-09-25 17:26:03,907 INFO  [main] c.i.controller.MainController - 1. View My Account
+2026-09-25 17:26:03,907 INFO  [main] c.i.controller.MainController - 2. Search Users
+2026-09-25 17:26:03,907 INFO  [main] c.i.controller.MainController - 3. Update My Account
+2026-09-25 17:26:03,908 INFO  [main] c.i.controller.MainController - 4. Change Password
+2026-09-25 17:26:03,908 INFO  [main] c.i.controller.MainController - 5. Logout
+2026-09-25 17:26:03,908 INFO  [main] c.i.controller.MainController - 6. Exit
+2026-09-25 17:26:03,909 INFO  [main] c.i.controller.MainController - Enter your choice: 
+2026-09-25 17:26:10,590 INFO  [main] c.i.controller.UserController - ========== CHANGE PASSWORD ==========
+2026-09-25 17:26:10,590 INFO  [main] c.i.controller.UserController - Enter new password: 
+2026-09-25 17:26:14,984 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 17:26:14,997 INFO  [main] com.instagram.dao.UserDAOImpl - Password changed successfully for user ID: 15
+2026-09-25 17:26:14,998 INFO  [main] c.instagram.service.UserServiceImpl - Password changed successfully for user ID: 15
+2026-09-25 17:26:14,998 INFO  [main] c.i.controller.UserController - Password changed successfully
+2026-09-25 17:26:14,998 INFO  [main] c.i.controller.MainController - 
+2026-09-25 17:26:14,998 INFO  [main] c.i.controller.MainController - ========== USER MENU ==========
+2026-09-25 17:26:14,998 INFO  [main] c.i.controller.MainController - Logged in as: testnew
+2026-09-25 17:26:14,998 INFO  [main] c.i.controller.MainController - 1. View My Account
+2026-09-25 17:26:14,998 INFO  [main] c.i.controller.MainController - 2. Search Users
+2026-09-25 17:26:14,998 INFO  [main] c.i.controller.MainController - 3. Update My Account
+2026-09-25 17:26:14,998 INFO  [main] c.i.controller.MainController - 4. Change Password
+2026-09-25 17:26:14,999 INFO  [main] c.i.controller.MainController - 5. Logout
+2026-09-25 17:26:14,999 INFO  [main] c.i.controller.MainController - 6. Exit
+2026-09-25 17:26:14,999 INFO  [main] c.i.controller.MainController - Enter your choice: 
+2026-09-25 17:26:20,375 INFO  [main] c.i.controller.UserController - ========== MY ACCOUNT ==========
+2026-09-25 17:26:20,376 INFO  [main] c.i.controller.UserController - User ID: 15
+2026-09-25 17:26:20,377 INFO  [main] c.i.controller.UserController - Username: testnew
+2026-09-25 17:26:20,377 INFO  [main] c.i.controller.UserController - Email: test@gmail.com
+2026-09-25 17:26:20,377 INFO  [main] c.i.controller.UserController - Status: ACTIVE
+2026-09-25 17:26:20,378 INFO  [main] c.i.controller.UserController - Created At: 2026-09-25 17:24:59
+2026-09-25 17:26:20,378 INFO  [main] c.i.controller.MainController - 
+2026-09-25 17:26:20,378 INFO  [main] c.i.controller.MainController - ========== USER MENU ==========
+2026-09-25 17:26:20,378 INFO  [main] c.i.controller.MainController - Logged in as: testnew
+2026-09-25 17:26:20,378 INFO  [main] c.i.controller.MainController - 1. View My Account
+2026-09-25 17:26:20,378 INFO  [main] c.i.controller.MainController - 2. Search Users
+2026-09-25 17:26:20,378 INFO  [main] c.i.controller.MainController - 3. Update My Account
+2026-09-25 17:26:20,378 INFO  [main] c.i.controller.MainController - 4. Change Password
+2026-09-25 17:26:20,379 INFO  [main] c.i.controller.MainController - 5. Logout
+2026-09-25 17:26:20,379 INFO  [main] c.i.controller.MainController - 6. Exit
+2026-09-25 17:26:20,379 INFO  [main] c.i.controller.MainController - Enter your choice: 
+2026-09-25 17:26:35,884 INFO  [main] c.i.controller.MainController - User logged out: testnew
+2026-09-25 17:26:35,884 INFO  [main] c.i.controller.MainController - 
+2026-09-25 17:26:35,884 INFO  [main] c.i.controller.MainController - ========== MAIN MENU ==========
+2026-09-25 17:26:35,884 INFO  [main] c.i.controller.MainController - 1. Register
+2026-09-25 17:26:35,884 INFO  [main] c.i.controller.MainController - 2. Login
+2026-09-25 17:26:35,884 INFO  [main] c.i.controller.MainController - 3. Exit
+2026-09-25 17:26:35,884 INFO  [main] c.i.controller.MainController - Enter your choice: 
+2026-09-25 17:26:39,088 INFO  [main] c.i.controller.MainController - Exiting application...
+2026-09-25 17:26:39,088 INFO  [main] c.i.controller.MainController - Application terminated
+2026-09-25 17:35:15,079 INFO  [main] c.i.controller.MainController - MainController initialized
+2026-09-25 17:35:15,081 INFO  [main] c.i.controller.MainController - UserController connected successfully
+2026-09-25 17:35:15,082 INFO  [main] c.i.controller.MainController - PostController connected successfully
+2026-09-25 17:35:15,082 INFO  [main] c.i.controller.MainController - ========================================
+2026-09-25 17:35:15,082 INFO  [main] c.i.controller.MainController -       INSTAGRAM JAVA APPLICATION
+2026-09-25 17:35:15,082 INFO  [main] c.i.controller.MainController - ========================================
+2026-09-25 17:35:15,082 INFO  [main] c.i.controller.MainController - 
+2026-09-25 17:35:15,082 INFO  [main] c.i.controller.MainController - ========== MAIN MENU ==========
+2026-09-25 17:35:15,082 INFO  [main] c.i.controller.MainController - 1. Register
+2026-09-25 17:35:15,082 INFO  [main] c.i.controller.MainController - 2. Login
+2026-09-25 17:35:15,083 INFO  [main] c.i.controller.MainController - 3. Exit
+2026-09-25 17:35:15,083 INFO  [main] c.i.controller.MainController - Enter your choice: 
+2026-09-25 17:35:22,381 INFO  [main] c.i.controller.UserController - ========== USER LOGIN ==========
+2026-09-25 17:35:22,381 INFO  [main] c.i.controller.UserController - Enter username or email: 
+2026-09-25 17:35:25,392 INFO  [main] c.i.controller.UserController - Enter password: 
+2026-09-25 17:35:28,263 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 17:35:28,303 INFO  [main] com.instagram.dao.UserDAOImpl - No active user found for login identifier: test
+2026-09-25 17:35:28,310 WARN  [main] c.instagram.service.UserServiceImpl - Login failed: active user not found for: test
+2026-09-25 17:35:28,311 WARN  [main] c.i.controller.UserController - Login validation failed: Invalid username/email or account is inactive
+2026-09-25 17:35:28,311 INFO  [main] c.i.controller.MainController - 
+2026-09-25 17:35:28,312 INFO  [main] c.i.controller.MainController - ========== MAIN MENU ==========
+2026-09-25 17:35:28,312 INFO  [main] c.i.controller.MainController - 1. Register
+2026-09-25 17:35:28,312 INFO  [main] c.i.controller.MainController - 2. Login
+2026-09-25 17:35:28,312 INFO  [main] c.i.controller.MainController - 3. Exit
+2026-09-25 17:35:28,312 INFO  [main] c.i.controller.MainController - Enter your choice: 
+2026-09-25 17:35:28,312 WARN  [main] c.i.controller.MainController - Invalid menu option
+2026-09-25 17:35:28,312 INFO  [main] c.i.controller.MainController - 
+2026-09-25 17:35:28,312 INFO  [main] c.i.controller.MainController - ========== MAIN MENU ==========
+2026-09-25 17:35:28,312 INFO  [main] c.i.controller.MainController - 1. Register
+2026-09-25 17:35:28,312 INFO  [main] c.i.controller.MainController - 2. Login
+2026-09-25 17:35:28,312 INFO  [main] c.i.controller.MainController - 3. Exit
+2026-09-25 17:35:28,312 INFO  [main] c.i.controller.MainController - Enter your choice: 
+2026-09-25 17:35:46,409 INFO  [main] c.i.controller.UserController - ========== USER LOGIN ==========
+2026-09-25 17:35:46,410 INFO  [main] c.i.controller.UserController - Enter username or email: 
+2026-09-25 17:36:19,300 INFO  [main] c.i.controller.UserController - Enter password: 
+2026-09-25 17:36:22,298 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 17:36:22,302 INFO  [main] com.instagram.dao.UserDAOImpl - Active user found for login identifier: testnew
+2026-09-25 17:36:22,303 INFO  [main] c.instagram.service.UserServiceImpl - User login successful for: testnew
+2026-09-25 17:36:22,303 INFO  [main] c.i.controller.UserController - Login successful. Welcome, testnew
+2026-09-25 17:36:22,303 INFO  [main] c.i.controller.MainController - 
+2026-09-25 17:36:22,303 INFO  [main] c.i.controller.MainController - ========== USER MENU ==========
+2026-09-25 17:36:22,303 INFO  [main] c.i.controller.MainController - Logged in as: testnew
+2026-09-25 17:36:22,303 INFO  [main] c.i.controller.MainController - 1. View My Account
+2026-09-25 17:36:22,303 INFO  [main] c.i.controller.MainController - 2. Search Users
+2026-09-25 17:36:22,303 INFO  [main] c.i.controller.MainController - 3. Update My Account
+2026-09-25 17:36:22,303 INFO  [main] c.i.controller.MainController - 4. Change Password
+2026-09-25 17:36:22,303 INFO  [main] c.i.controller.MainController - 5. Post Management
+2026-09-25 17:36:22,303 INFO  [main] c.i.controller.MainController - 6. Logout
+2026-09-25 17:36:22,303 INFO  [main] c.i.controller.MainController - 7. Exit
+2026-09-25 17:36:22,303 INFO  [main] c.i.controller.MainController - Enter your choice: 
+2026-09-25 17:36:28,948 INFO  [main] c.i.controller.PostController - 
+2026-09-25 17:36:28,949 INFO  [main] c.i.controller.PostController - ========== POST MANAGEMENT ==========
+2026-09-25 17:36:28,949 INFO  [main] c.i.controller.PostController - Logged in as: testnew
+2026-09-25 17:36:28,950 INFO  [main] c.i.controller.PostController - 1. Create Post
+2026-09-25 17:36:28,950 INFO  [main] c.i.controller.PostController - 2. View My Posts
+2026-09-25 17:36:28,950 INFO  [main] c.i.controller.PostController - 3. View All Posts
+2026-09-25 17:36:28,950 INFO  [main] c.i.controller.PostController - 4. View User Posts
+2026-09-25 17:36:28,951 INFO  [main] c.i.controller.PostController - 5. View Post Details
+2026-09-25 17:36:28,951 INFO  [main] c.i.controller.PostController - 6. Update My Post
+2026-09-25 17:36:28,951 INFO  [main] c.i.controller.PostController - 7. Delete My Post
+2026-09-25 17:36:28,951 INFO  [main] c.i.controller.PostController - 8. Back to User Menu
+2026-09-25 17:36:28,951 INFO  [main] c.i.controller.PostController - Enter your choice: 
+2026-09-25 17:36:33,077 INFO  [main] c.i.controller.PostController - ========== MY POSTS ==========
+2026-09-25 17:36:33,127 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 17:36:33,143 INFO  [main] com.instagram.dao.PostDAOImpl - Found 0 active posts for user ID: 15
+2026-09-25 17:36:33,143 INFO  [main] c.i.controller.PostController - No active posts found
+2026-09-25 17:36:33,144 INFO  [main] c.i.controller.PostController - 
+2026-09-25 17:36:33,144 INFO  [main] c.i.controller.PostController - ========== POST MANAGEMENT ==========
+2026-09-25 17:36:33,144 INFO  [main] c.i.controller.PostController - Logged in as: testnew
+2026-09-25 17:36:33,144 INFO  [main] c.i.controller.PostController - 1. Create Post
+2026-09-25 17:36:33,144 INFO  [main] c.i.controller.PostController - 2. View My Posts
+2026-09-25 17:36:33,144 INFO  [main] c.i.controller.PostController - 3. View All Posts
+2026-09-25 17:36:33,144 INFO  [main] c.i.controller.PostController - 4. View User Posts
+2026-09-25 17:36:33,144 INFO  [main] c.i.controller.PostController - 5. View Post Details
+2026-09-25 17:36:33,144 INFO  [main] c.i.controller.PostController - 6. Update My Post
+2026-09-25 17:36:33,144 INFO  [main] c.i.controller.PostController - 7. Delete My Post
+2026-09-25 17:36:33,144 INFO  [main] c.i.controller.PostController - 8. Back to User Menu
+2026-09-25 17:36:33,144 INFO  [main] c.i.controller.PostController - Enter your choice: 
+2026-09-25 17:36:38,321 INFO  [main] c.i.controller.PostController - ========== CREATE POST ==========
+2026-09-25 17:36:38,322 INFO  [main] c.i.controller.PostController - Enter caption: 
+2026-09-25 17:36:46,676 INFO  [main] c.i.controller.PostController - Enter image URL (press Enter if none): 
+2026-09-25 17:36:52,613 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 17:36:52,626 INFO  [main] com.instagram.dao.PostDAOImpl - Post created successfully with ID: 1 for user ID: 15
+2026-09-25 17:36:52,627 INFO  [main] c.instagram.service.PostServiceImpl - Post creation successful with ID: 1
+2026-09-25 17:36:52,627 INFO  [main] c.i.controller.PostController - Post created successfully. Post ID: 1
+2026-09-25 17:36:52,627 INFO  [main] c.i.controller.PostController - 
+2026-09-25 17:36:52,627 INFO  [main] c.i.controller.PostController - ========== POST MANAGEMENT ==========
+2026-09-25 17:36:52,627 INFO  [main] c.i.controller.PostController - Logged in as: testnew
+2026-09-25 17:36:52,628 INFO  [main] c.i.controller.PostController - 1. Create Post
+2026-09-25 17:36:52,628 INFO  [main] c.i.controller.PostController - 2. View My Posts
+2026-09-25 17:36:52,628 INFO  [main] c.i.controller.PostController - 3. View All Posts
+2026-09-25 17:36:52,628 INFO  [main] c.i.controller.PostController - 4. View User Posts
+2026-09-25 17:36:52,628 INFO  [main] c.i.controller.PostController - 5. View Post Details
+2026-09-25 17:36:52,628 INFO  [main] c.i.controller.PostController - 6. Update My Post
+2026-09-25 17:36:52,628 INFO  [main] c.i.controller.PostController - 7. Delete My Post
+2026-09-25 17:36:52,628 INFO  [main] c.i.controller.PostController - 8. Back to User Menu
+2026-09-25 17:36:52,628 INFO  [main] c.i.controller.PostController - Enter your choice: 
+2026-09-25 17:37:02,441 INFO  [main] c.i.controller.PostController - ========== MY POSTS ==========
+2026-09-25 17:37:02,454 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 17:37:02,465 INFO  [main] com.instagram.dao.PostDAOImpl - Found 1 active posts for user ID: 15
+2026-09-25 17:37:02,466 INFO  [main] c.i.controller.PostController - Total posts: 1
+2026-09-25 17:37:02,466 INFO  [main] c.i.controller.PostController - ----------------------------------------
+2026-09-25 17:37:02,466 INFO  [main] c.i.controller.PostController - Post ID: 1
+2026-09-25 17:37:02,466 INFO  [main] c.i.controller.PostController - Owner ID: 15
+2026-09-25 17:37:02,466 INFO  [main] c.i.controller.PostController - Owner Username: testnew
+2026-09-25 17:37:02,466 INFO  [main] c.i.controller.PostController - Caption: post1
+2026-09-25 17:37:02,466 INFO  [main] c.i.controller.PostController - Image URL: null
+2026-09-25 17:37:02,466 INFO  [main] c.i.controller.PostController - Status: ACTIVE
+2026-09-25 17:37:02,466 INFO  [main] c.i.controller.PostController - Created At: 2026-09-25 17:36:52
+2026-09-25 17:37:02,466 INFO  [main] c.i.controller.PostController - ----------------------------------------
+2026-09-25 17:37:02,466 INFO  [main] c.i.controller.PostController - 
+2026-09-25 17:37:02,466 INFO  [main] c.i.controller.PostController - ========== POST MANAGEMENT ==========
+2026-09-25 17:37:02,466 INFO  [main] c.i.controller.PostController - Logged in as: testnew
+2026-09-25 17:37:02,466 INFO  [main] c.i.controller.PostController - 1. Create Post
+2026-09-25 17:37:02,466 INFO  [main] c.i.controller.PostController - 2. View My Posts
+2026-09-25 17:37:02,466 INFO  [main] c.i.controller.PostController - 3. View All Posts
+2026-09-25 17:37:02,466 INFO  [main] c.i.controller.PostController - 4. View User Posts
+2026-09-25 17:37:02,466 INFO  [main] c.i.controller.PostController - 5. View Post Details
+2026-09-25 17:37:02,466 INFO  [main] c.i.controller.PostController - 6. Update My Post
+2026-09-25 17:37:02,466 INFO  [main] c.i.controller.PostController - 7. Delete My Post
+2026-09-25 17:37:02,466 INFO  [main] c.i.controller.PostController - 8. Back to User Menu
+2026-09-25 17:37:02,466 INFO  [main] c.i.controller.PostController - Enter your choice: 
+2026-09-25 17:37:20,698 INFO  [main] c.i.controller.PostController - ========== ALL ACTIVE POSTS ==========
+2026-09-25 17:37:20,717 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 17:37:20,719 INFO  [main] com.instagram.dao.PostDAOImpl - Found 1 active posts
+2026-09-25 17:37:20,720 INFO  [main] c.i.controller.PostController - Total posts: 1
+2026-09-25 17:37:20,720 INFO  [main] c.i.controller.PostController - ----------------------------------------
+2026-09-25 17:37:20,720 INFO  [main] c.i.controller.PostController - Post ID: 1
+2026-09-25 17:37:20,720 INFO  [main] c.i.controller.PostController - Owner ID: 15
+2026-09-25 17:37:20,720 INFO  [main] c.i.controller.PostController - Owner Username: testnew
+2026-09-25 17:37:20,720 INFO  [main] c.i.controller.PostController - Caption: post1
+2026-09-25 17:37:20,720 INFO  [main] c.i.controller.PostController - Image URL: null
+2026-09-25 17:37:20,720 INFO  [main] c.i.controller.PostController - Status: ACTIVE
+2026-09-25 17:37:20,720 INFO  [main] c.i.controller.PostController - Created At: 2026-09-25 17:36:52
+2026-09-25 17:37:20,720 INFO  [main] c.i.controller.PostController - ----------------------------------------
+2026-09-25 17:37:20,720 INFO  [main] c.i.controller.PostController - 
+2026-09-25 17:37:20,720 INFO  [main] c.i.controller.PostController - ========== POST MANAGEMENT ==========
+2026-09-25 17:37:20,720 INFO  [main] c.i.controller.PostController - Logged in as: testnew
+2026-09-25 17:37:20,720 INFO  [main] c.i.controller.PostController - 1. Create Post
+2026-09-25 17:37:20,720 INFO  [main] c.i.controller.PostController - 2. View My Posts
+2026-09-25 17:37:20,720 INFO  [main] c.i.controller.PostController - 3. View All Posts
+2026-09-25 17:37:20,720 INFO  [main] c.i.controller.PostController - 4. View User Posts
+2026-09-25 17:37:20,720 INFO  [main] c.i.controller.PostController - 5. View Post Details
+2026-09-25 17:37:20,720 INFO  [main] c.i.controller.PostController - 6. Update My Post
+2026-09-25 17:37:20,720 INFO  [main] c.i.controller.PostController - 7. Delete My Post
+2026-09-25 17:37:20,720 INFO  [main] c.i.controller.PostController - 8. Back to User Menu
+2026-09-25 17:37:20,720 INFO  [main] c.i.controller.PostController - Enter your choice: 
+2026-09-25 17:37:27,964 INFO  [main] c.i.controller.PostController - ========== VIEW USER POSTS ==========
+2026-09-25 17:37:27,964 INFO  [main] c.i.controller.PostController - Enter user ID: 
+2026-09-25 17:37:57,724 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 17:37:57,727 INFO  [main] com.instagram.dao.PostDAOImpl - Found 0 active posts for user ID: 13
+2026-09-25 17:37:57,727 INFO  [main] c.i.controller.PostController - No active posts found
+2026-09-25 17:37:57,727 INFO  [main] c.i.controller.PostController - 
+2026-09-25 17:37:57,728 INFO  [main] c.i.controller.PostController - ========== POST MANAGEMENT ==========
+2026-09-25 17:37:57,728 INFO  [main] c.i.controller.PostController - Logged in as: testnew
+2026-09-25 17:37:57,728 INFO  [main] c.i.controller.PostController - 1. Create Post
+2026-09-25 17:37:57,728 INFO  [main] c.i.controller.PostController - 2. View My Posts
+2026-09-25 17:37:57,728 INFO  [main] c.i.controller.PostController - 3. View All Posts
+2026-09-25 17:37:57,728 INFO  [main] c.i.controller.PostController - 4. View User Posts
+2026-09-25 17:37:57,728 INFO  [main] c.i.controller.PostController - 5. View Post Details
+2026-09-25 17:37:57,728 INFO  [main] c.i.controller.PostController - 6. Update My Post
+2026-09-25 17:37:57,728 INFO  [main] c.i.controller.PostController - 7. Delete My Post
+2026-09-25 17:37:57,728 INFO  [main] c.i.controller.PostController - 8. Back to User Menu
+2026-09-25 17:37:57,728 INFO  [main] c.i.controller.PostController - Enter your choice: 
+2026-09-25 17:38:10,230 INFO  [main] c.i.controller.PostController - ========== UPDATE MY POST ==========
+2026-09-25 17:38:10,231 INFO  [main] c.i.controller.PostController - Enter post ID: 
+2026-09-25 17:38:17,671 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 17:38:17,673 INFO  [main] com.instagram.dao.PostDAOImpl - Post found successfully with ID: 1
+2026-09-25 17:38:17,673 INFO  [main] c.i.controller.PostController - Current caption: post1
+2026-09-25 17:38:17,673 INFO  [main] c.i.controller.PostController - Current image URL: null
+2026-09-25 17:38:17,673 INFO  [main] c.i.controller.PostController - Enter new caption: 
+2026-09-25 17:38:22,904 WARN  [main] c.i.controller.PostController - This field cannot be empty
+2026-09-25 17:38:22,904 INFO  [main] c.i.controller.PostController - Enter new caption: 
+2026-09-25 17:38:28,503 INFO  [main] c.i.controller.PostController - Enter new image URL (press Enter to keep current): 
+2026-09-25 17:38:30,100 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 17:38:30,107 INFO  [main] com.instagram.dao.PostDAOImpl - Post updated successfully with ID: 1 by user ID: 15
+2026-09-25 17:38:30,108 INFO  [main] c.instagram.service.PostServiceImpl - Post updated successfully with ID: 1
+2026-09-25 17:38:30,108 INFO  [main] c.i.controller.PostController - Post updated successfully
+2026-09-25 17:38:30,108 INFO  [main] c.i.controller.PostController - 
+2026-09-25 17:38:30,108 INFO  [main] c.i.controller.PostController - ========== POST MANAGEMENT ==========
+2026-09-25 17:38:30,108 INFO  [main] c.i.controller.PostController - Logged in as: testnew
+2026-09-25 17:38:30,108 INFO  [main] c.i.controller.PostController - 1. Create Post
+2026-09-25 17:38:30,108 INFO  [main] c.i.controller.PostController - 2. View My Posts
+2026-09-25 17:38:30,108 INFO  [main] c.i.controller.PostController - 3. View All Posts
+2026-09-25 17:38:30,108 INFO  [main] c.i.controller.PostController - 4. View User Posts
+2026-09-25 17:38:30,108 INFO  [main] c.i.controller.PostController - 5. View Post Details
+2026-09-25 17:38:30,108 INFO  [main] c.i.controller.PostController - 6. Update My Post
+2026-09-25 17:38:30,108 INFO  [main] c.i.controller.PostController - 7. Delete My Post
+2026-09-25 17:38:30,108 INFO  [main] c.i.controller.PostController - 8. Back to User Menu
+2026-09-25 17:38:30,108 INFO  [main] c.i.controller.PostController - Enter your choice: 
+2026-09-25 17:38:36,851 INFO  [main] c.i.controller.PostController - ========== DELETE MY POST ==========
+2026-09-25 17:38:36,851 INFO  [main] c.i.controller.PostController - Enter post ID: 
+2026-09-25 17:38:38,501 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 17:38:38,502 INFO  [main] com.instagram.dao.PostDAOImpl - Post found successfully with ID: 1
+2026-09-25 17:38:38,503 INFO  [main] c.i.controller.PostController - Post caption: newww
+2026-09-25 17:38:38,503 INFO  [main] c.i.controller.PostController - Confirm deletion? Enter YES to continue: 
+2026-09-25 17:38:43,004 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 17:38:43,016 INFO  [main] com.instagram.dao.PostDAOImpl - Post deleted successfully with ID: 1 by user ID: 15
+2026-09-25 17:38:43,017 INFO  [main] c.instagram.service.PostServiceImpl - Post deleted successfully with ID: 1
+2026-09-25 17:38:43,017 INFO  [main] c.i.controller.PostController - Post deleted successfully
+2026-09-25 17:38:43,017 INFO  [main] c.i.controller.PostController - 
+2026-09-25 17:38:43,017 INFO  [main] c.i.controller.PostController - ========== POST MANAGEMENT ==========
+2026-09-25 17:38:43,017 INFO  [main] c.i.controller.PostController - Logged in as: testnew
+2026-09-25 17:38:43,017 INFO  [main] c.i.controller.PostController - 1. Create Post
+2026-09-25 17:38:43,017 INFO  [main] c.i.controller.PostController - 2. View My Posts
+2026-09-25 17:38:43,017 INFO  [main] c.i.controller.PostController - 3. View All Posts
+2026-09-25 17:38:43,017 INFO  [main] c.i.controller.PostController - 4. View User Posts
+2026-09-25 17:38:43,017 INFO  [main] c.i.controller.PostController - 5. View Post Details
+2026-09-25 17:38:43,017 INFO  [main] c.i.controller.PostController - 6. Update My Post
+2026-09-25 17:38:43,017 INFO  [main] c.i.controller.PostController - 7. Delete My Post
+2026-09-25 17:38:43,017 INFO  [main] c.i.controller.PostController - 8. Back to User Menu
+2026-09-25 17:38:43,017 INFO  [main] c.i.controller.PostController - Enter your choice: 
+2026-09-25 17:38:52,313 INFO  [main] c.i.controller.PostController - Returning to User Menu
+2026-09-25 17:38:52,313 INFO  [main] c.i.controller.MainController - 
+2026-09-25 17:38:52,313 INFO  [main] c.i.controller.MainController - ========== USER MENU ==========
+2026-09-25 17:38:52,313 INFO  [main] c.i.controller.MainController - Logged in as: testnew
+2026-09-25 17:38:52,313 INFO  [main] c.i.controller.MainController - 1. View My Account
+2026-09-25 17:38:52,313 INFO  [main] c.i.controller.MainController - 2. Search Users
+2026-09-25 17:38:52,313 INFO  [main] c.i.controller.MainController - 3. Update My Account
+2026-09-25 17:38:52,313 INFO  [main] c.i.controller.MainController - 4. Change Password
+2026-09-25 17:38:52,313 INFO  [main] c.i.controller.MainController - 5. Post Management
+2026-09-25 17:38:52,313 INFO  [main] c.i.controller.MainController - 6. Logout
+2026-09-25 17:38:52,313 INFO  [main] c.i.controller.MainController - 7. Exit
+2026-09-25 17:38:52,313 INFO  [main] c.i.controller.MainController - Enter your choice: 
+2026-09-25 17:38:57,325 INFO  [main] c.i.controller.MainController - Exiting application...
+2026-09-25 17:38:57,325 INFO  [main] c.i.controller.MainController - Application terminated
+2026-09-25 18:03:16.737 INFO  [main] c.i.controller.MainController - MainController initialized
+2026-09-25 18:03:16.739 INFO  [main] c.i.controller.MainController - UserController connected successfully
+2026-09-25 18:03:16.739 INFO  [main] c.i.controller.MainController - PostController connected successfully
+2026-09-25 18:03:31.595 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 18:03:31.627 INFO  [main] com.instagram.dao.UserDAOImpl - Active user found for login identifier: testnew
+2026-09-25 18:03:31.633 INFO  [main] c.instagram.service.UserServiceImpl - User login successful for: testnew
+2026-09-25 18:03:31.633 INFO  [main] c.i.controller.UserController - User login completed successfully for: testnew
+2026-09-25 18:03:52.704 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 18:03:52.719 INFO  [main] com.instagram.dao.PostDAOImpl - Post created successfully with ID: 2 for user ID: 15
+2026-09-25 18:03:52.720 INFO  [main] c.instagram.service.PostServiceImpl - Post creation successful with ID: 2
+2026-09-25 18:03:52.720 INFO  [main] c.i.controller.PostController - Post created successfully for user ID: 15
+2026-09-25 18:04:00.005 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 18:04:00.008 INFO  [main] com.instagram.dao.PostDAOImpl - Found 1 active posts for user ID: 15
+2026-09-25 18:04:00.032 INFO  [main] c.i.controller.PostController - Displayed 1 posts for user ID: 15
+2026-09-25 18:04:17.353 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 18:04:17.356 INFO  [main] com.instagram.dao.UserDAOImpl - User found with username: vn
+2026-09-25 18:04:17.369 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 18:04:17.372 INFO  [main] com.instagram.dao.PostDAOImpl - Found 0 active posts for user ID: 13
+2026-09-25 18:04:27.621 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 18:04:27.623 INFO  [main] com.instagram.dao.PostDAOImpl - Found 1 active posts
+2026-09-25 18:04:27.624 INFO  [main] c.i.controller.PostController - Displayed 1 posts in Explore
+2026-09-25 18:04:38.558 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 18:04:38.559 INFO  [main] com.instagram.dao.PostDAOImpl - Found 1 active posts
+2026-09-25 18:04:40.590 INFO  [main] c.i.controller.PostController - Post details viewed for post ID: 2
+2026-09-25 18:04:52.727 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 18:04:52.730 INFO  [main] com.instagram.dao.PostDAOImpl - Found 1 active posts for user ID: 15
+2026-09-25 18:05:07.176 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 18:05:07.181 INFO  [main] com.instagram.dao.PostDAOImpl - Post deleted successfully with ID: 2 by user ID: 15
+2026-09-25 18:05:07.181 INFO  [main] c.instagram.service.PostServiceImpl - Post deleted successfully with ID: 2
+2026-09-25 18:05:07.181 INFO  [main] c.i.controller.PostController - Post deleted successfully. Post ID: 2
+2026-09-25 18:05:09.303 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 18:05:09.304 INFO  [main] com.instagram.dao.PostDAOImpl - Found 0 active posts for user ID: 15
+2026-09-25 18:05:15.472 INFO  [main] c.i.controller.PostController - Returning to User Menu
+2026-09-25 18:05:19.564 INFO  [main] c.i.controller.MainController - User logged out: testnew
+2026-09-25 18:05:22.082 INFO  [main] c.i.controller.MainController - Application terminated
+2026-09-25 18:08:41.767 INFO  [main] c.i.controller.MainController - MainController initialized
+2026-09-25 18:08:41.770 INFO  [main] c.i.controller.MainController - UserController connected successfully
+2026-09-25 18:08:41.770 INFO  [main] c.i.controller.MainController - PostController connected successfully
+2026-09-25 18:08:55.474 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 18:08:55.503 INFO  [main] com.instagram.dao.UserDAOImpl - Active user found for login identifier: testnew
+2026-09-25 18:08:55.509 INFO  [main] c.instagram.service.UserServiceImpl - User login successful for: testnew
+2026-09-25 18:08:55.509 INFO  [main] c.i.controller.UserController - User login completed successfully for: testnew
+2026-09-25 18:09:15.277 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 18:09:15.285 INFO  [main] com.instagram.dao.PostDAOImpl - Post created successfully with ID: 3 for user ID: 15
+2026-09-25 18:09:15.286 INFO  [main] c.instagram.service.PostServiceImpl - Post creation successful with ID: 3
+2026-09-25 18:09:15.286 INFO  [main] c.i.controller.PostController - Post created successfully for user ID: 15
+2026-09-25 18:09:29.729 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 18:09:29.731 INFO  [main] com.instagram.dao.PostDAOImpl - Found 1 active posts for user ID: 15
+2026-09-25 18:09:49.356 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 18:09:49.360 INFO  [main] com.instagram.dao.PostDAOImpl - Post updated successfully with ID: 3 by user ID: 15
+2026-09-25 18:09:49.360 INFO  [main] c.instagram.service.PostServiceImpl - Post updated successfully with ID: 3
+2026-09-25 18:09:49.361 INFO  [main] c.i.controller.PostController - Post updated successfully. Post ID: 3
+2026-09-25 18:09:51.630 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 18:09:51.632 INFO  [main] com.instagram.dao.PostDAOImpl - Found 1 active posts for user ID: 15
+2026-09-25 18:09:51.633 INFO  [main] c.i.controller.PostController - Displayed 1 posts for user ID: 15
+2026-09-25 18:10:38.753 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 18:10:38.766 INFO  [main] com.instagram.dao.PostDAOImpl - Post created successfully with ID: 4 for user ID: 15
+2026-09-25 18:10:38.767 INFO  [main] c.instagram.service.PostServiceImpl - Post creation successful with ID: 4
+2026-09-25 18:10:38.767 INFO  [main] c.i.controller.PostController - Post created successfully for user ID: 15
+2026-09-25 18:10:51.320 INFO  [main] c.i.controller.PostController - Returning to User Menu
+2026-09-25 18:10:56.106 INFO  [main] c.i.controller.MainController - User logged out: testnew
+2026-09-25 18:11:10.746 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 18:11:10.748 INFO  [main] com.instagram.dao.UserDAOImpl - Active user found for login identifier: vn
+2026-09-25 18:11:10.748 WARN  [main] c.instagram.service.UserServiceImpl - Login failed: invalid password for: vn
+2026-09-25 18:11:10.748 WARN  [main] c.i.controller.UserController - User login validation failed for identifier: vn
+2026-09-25 18:11:29.411 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 18:11:29.412 INFO  [main] com.instagram.dao.UserDAOImpl - Active user found for login identifier: vn
+2026-09-25 18:11:29.413 INFO  [main] c.instagram.service.UserServiceImpl - User login successful for: VN
+2026-09-25 18:11:29.413 INFO  [main] c.i.controller.UserController - User login completed successfully for: vn
+2026-09-25 18:11:52.856 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 18:11:52.857 INFO  [main] com.instagram.dao.UserDAOImpl - User found with username: testnew
+2026-09-25 18:11:52.865 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 18:11:52.866 INFO  [main] com.instagram.dao.PostDAOImpl - Found 2 active posts for user ID: 15
+2026-09-25 18:11:52.867 INFO  [main] c.i.controller.PostController - Displayed posts for username: testnew
+2026-09-25 18:12:09.720 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 18:12:09.732 INFO  [main] com.instagram.dao.PostDAOImpl - Found 0 active posts for user ID: 13
+2026-09-25 18:12:59.334 INFO  [main] c.i.controller.PostController - Returning to User Menu
+2026-09-25 18:13:03.372 INFO  [main] c.i.controller.MainController - Application terminated
+2026-09-25 19:15:47.694 INFO  [main] c.i.controller.MainController - MainController initialized
+2026-09-25 19:15:47.696 INFO  [main] c.i.controller.MainController - UserController connected successfully
+2026-09-25 19:15:47.696 INFO  [main] c.i.controller.MainController - PostController connected successfully
+2026-09-25 19:16:00.703 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 19:16:00.739 INFO  [main] com.instagram.dao.UserDAOImpl - Active user found for login identifier: testnew
+2026-09-25 19:16:00.758 INFO  [main] c.instagram.service.UserServiceImpl - User login successful for: testnew
+2026-09-25 19:16:00.760 INFO  [main] c.i.controller.UserController - User login completed successfully for: testnew
+2026-09-25 19:16:30.428 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 19:16:30.445 INFO  [main] com.instagram.dao.PostDAOImpl - Found 2 active posts for user ID: 15
+2026-09-25 19:16:45.154 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 19:16:45.168 INFO  [main] com.instagram.dao.PostDAOImpl - Post created successfully with ID: 5 for user ID: 15
+2026-09-25 19:16:45.169 INFO  [main] c.instagram.service.PostServiceImpl - Post creation successful with ID: 5
+2026-09-25 19:16:56.375 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 19:16:56.388 INFO  [main] com.instagram.dao.PostDAOImpl - Found 3 active posts for user ID: 15
+2026-09-25 19:17:10.943 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 19:17:10.947 INFO  [main] com.instagram.dao.PostDAOImpl - Found 3 active posts
+2026-09-25 19:17:25.075 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 19:17:25.078 INFO  [main] com.instagram.dao.PostDAOImpl - Found 3 active posts
+2026-09-25 19:17:37.406 INFO  [main] c.i.controller.MainController - Application terminated
+2026-09-25 19:29:03.813 INFO  [main] c.i.controller.MainController - MainController initialized
+2026-09-25 19:29:03.814 INFO  [main] c.i.controller.MainController - UserController connected successfully
+2026-09-25 19:29:03.814 INFO  [main] c.i.controller.MainController - PostController connected successfully
+2026-09-25 19:29:31.224 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 19:29:31.276 INFO  [main] com.instagram.dao.UserDAOImpl - User created successfully with ID: 16
+2026-09-25 19:29:31.283 INFO  [main] c.instagram.service.UserServiceImpl - User registration successful with ID: 16
+2026-09-25 19:29:31.284 INFO  [main] c.i.controller.UserController - User registration completed for username: Manasa
+2026-09-25 19:30:47.543 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 19:30:47.550 INFO  [main] com.instagram.dao.UserDAOImpl - Active user found for login identifier: Manasa
+2026-09-25 19:30:47.553 INFO  [main] c.instagram.service.UserServiceImpl - User login successful for: Manasa
+2026-09-25 19:30:47.553 INFO  [main] c.i.controller.UserController - User login completed successfully for: Manasa
+2026-09-25 19:31:12.447 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 19:31:12.462 INFO  [main] com.instagram.dao.UserDAOImpl - User search completed for 'VN'. Results found: 2
+2026-09-25 19:31:12.464 INFO  [main] c.instagram.service.UserServiceImpl - User search completed for 'VN'. Results: 2
+2026-09-25 19:32:07.373 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 19:32:07.385 INFO  [main] com.instagram.dao.UserDAOImpl - User updated successfully with ID: 16
+2026-09-25 19:32:07.387 INFO  [main] c.instagram.service.UserServiceImpl - User updated successfully with ID: 16
+2026-09-25 19:32:46.698 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 19:32:46.715 INFO  [main] com.instagram.dao.UserDAOImpl - Password changed successfully for user ID: 16
+2026-09-25 19:32:46.717 INFO  [main] c.instagram.service.UserServiceImpl - Password changed successfully for user ID: 16
+2026-09-25 19:33:15.959 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 19:33:15.971 INFO  [main] com.instagram.dao.PostDAOImpl - Post created successfully with ID: 6 for user ID: 16
+2026-09-25 19:33:15.972 INFO  [main] c.instagram.service.PostServiceImpl - Post creation successful with ID: 6
+2026-09-25 19:33:21.438 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 19:33:21.443 INFO  [main] com.instagram.dao.PostDAOImpl - Found 1 active posts for user ID: 16
+2026-09-25 19:33:36.445 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 19:33:36.448 INFO  [main] com.instagram.dao.PostDAOImpl - Found 4 active posts
+2026-09-25 19:34:01.561 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 19:34:01.564 INFO  [main] com.instagram.dao.UserDAOImpl - User found by username: VN
+2026-09-25 19:34:01.576 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 19:34:01.580 INFO  [main] com.instagram.dao.PostDAOImpl - Found 0 active posts for user ID: 13
+2026-09-25 19:34:16.127 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 19:34:16.132 INFO  [main] com.instagram.dao.PostDAOImpl - Found 4 active posts
+2026-09-25 19:34:34.432 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 19:34:34.443 INFO  [main] com.instagram.dao.PostDAOImpl - Found 1 active posts for user ID: 16
+2026-09-25 19:35:37.554 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 19:35:37.569 INFO  [main] com.instagram.dao.PostDAOImpl - Post updated successfully with ID: 6 by user ID: 16
+2026-09-25 19:35:37.570 INFO  [main] c.instagram.service.PostServiceImpl - Post updated successfully with ID: 6
+2026-09-25 19:38:08.726 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 19:38:08.732 INFO  [main] com.instagram.dao.UserDAOImpl - User search completed for 'Yalla Manasa'. Results found: 1
+2026-09-25 19:38:08.733 INFO  [main] c.instagram.service.UserServiceImpl - User search completed for 'Yalla Manasa'. Results: 1
+2026-09-25 20:20:45.328 INFO  [main] c.i.controller.MainController - MainController initialized
+2026-09-25 20:20:45.332 INFO  [main] c.i.controller.MainController - UserController connected successfully
+2026-09-25 20:20:45.333 INFO  [main] c.i.controller.MainController - PostController connected successfully
+2026-09-25 20:21:20.458 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 20:21:20.551 INFO  [main] com.instagram.dao.UserDAOImpl - User created successfully with ID: 10
+2026-09-25 20:21:20.559 INFO  [main] c.instagram.service.UserServiceImpl - User registration successful with ID: 10
+2026-09-25 20:21:20.560 INFO  [main] c.i.controller.UserController - User registration completed for username: Yalla Manasa
+2026-09-25 20:21:54.550 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 20:21:54.578 INFO  [main] com.instagram.dao.UserDAOImpl - Active user found for login identifier: Yalla Manasa
+2026-09-25 20:21:54.581 INFO  [main] c.instagram.service.UserServiceImpl - User login successful for: Yalla Manasa
+2026-09-25 20:21:54.581 INFO  [main] c.i.controller.UserController - User login completed successfully for: Yalla Manasa
+2026-09-25 20:22:46.662 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 20:22:46.692 INFO  [main] com.instagram.dao.UserDAOImpl - Password changed successfully for user ID: 10
+2026-09-25 20:22:46.693 INFO  [main] c.instagram.service.UserServiceImpl - Password changed successfully for user ID: 10
+2026-09-25 20:27:26.032 INFO  [main] com.instagram.util.DBConnection - Database connection established successfully
+2026-09-25 20:27:26.037 INFO  [main] com.instagram.dao.UserDAOImpl - User updated successfully with ID: 10
+2026-09-25 20:27:26.038 INFO  [main] c.instagram.service.UserServiceImpl - User updated successfully with ID: 10
